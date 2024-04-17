@@ -1,5 +1,5 @@
-import { useAccordionContext } from './Accordion';
-import { useAccordionItemContext } from './AccordionItem';
+import { useAccordionContext } from '../../hooks/accordion-context';
+import { useAccordionItemContext } from '../../hooks/accordion-item-context';
 
 const AccordionTitle = ({ className, children }) => {
 	const { toggleItem } = useAccordionContext();

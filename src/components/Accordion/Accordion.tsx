@@ -1,26 +1,15 @@
-import { useContext, createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 import AccordionItem from './AccordionItem';
 import AccordionTitle from './AccordionTitle';
 import AccordionContent from './AccordionContent';
 
-const AccordionContext = createContext();
+export const AccordionContext = createContext({});
 
-export function useAccordionContext() {
-	const ctx = useContext(AccordionContext);
-
-	if (!ctx) {
-		throw new Error(
-			'Accordion-related components must be wrapped in an Accordion component'
-		);
-	}
-
-	return ctx;
-}
 const Accordion = ({ children, className }) => {
-	const [openItemId, setOpenItemId] = useState(null);
+	const [openItemId, setOpenItemId] = useState();
 
-	const toggleItem = id => {
-		setOpenItemId(prevId => (prevId === id ? null : id));
+	const toggleItem = (id: number) => {
+		setOpenItemId(prevId => (prevId === id ? 0 : id));
 	};
 
 	const contextValue = {
