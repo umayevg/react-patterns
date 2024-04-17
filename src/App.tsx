@@ -40,7 +40,24 @@ function App() {
 					{item => <Place item={item} />}
 				</SearchableList>
 				<SearchableList
-					items={['item 1', 'item 2', 'john', 'bob', 'jane']}
+					// write some beautiful places stings in array
+					items={[
+						'Santorini, Greece',
+						'Kyoto, Japan',
+						'Banff, Canada',
+						'Cinque Terre, Italy',
+						'Reykjavik, Iceland',
+						'Queenstown, New Zealand',
+						'Petra, Jordan',
+						'Yosemite, USA',
+						'Amalfi Coast, Italy',
+						'Bali, Indonesia',
+						'Machu Picchu, Peru',
+						'Bora Bora, French Polynesia',
+						'Cape Town, South Africa',
+						'Hallstatt, Austria',
+						'Maldives, Indian Ocean',
+					]}
 					itemKeyFn={item => item}
 				>
 					{item => <p>{item}</p>}
